@@ -2,7 +2,7 @@
   "name": "vscode-pnach",
   "displayName": "PCSX2 .pnach syntax",
   "description": "Syntax highlighting for PCSX2 .pnach files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "matheus-sena",
   "license": "MIT",
   "icon": "img/pnach.png",
