@@ -40,7 +40,7 @@
       {
         "language": "pnach",
         "scopeName": "source.pnach",
-        "path": "./syntaxes/pnach.tmLanguage.json"
+        "path": "./pnach.tmLanguage.json"
       }
     ]
   }
