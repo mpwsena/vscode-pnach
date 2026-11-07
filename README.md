@@ -1,2 +1,1 @@
-# vscode-pnach
-Syntax highlighting for PCSX2 .pnach cheat files in VS Code
+Syntax highlighting for `.pnach` files, a plain text format used to apply cheats and patches to PlayStation 2 games.

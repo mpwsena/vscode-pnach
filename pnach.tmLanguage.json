@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "pnach",
+  "scopeName": "source.pnach",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#section"
+    },
+    {
+      "include": "#patch"
+    },
+    {
+      "include": "#text-key"
+    },
+    {
+      "include": "#key"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "match": "(?://|;).*$",
+      "name": "comment.line.pnach"
+    },
+    "section": {
+      "match": "^\\s*(\\[)([^\\]]*)(\\])",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.section.pnach"
+        },
+        "2": {
+          "name": "entity.name.section.pnach"
+        },
+        "3": {
+          "name": "punctuation.definition.section.pnach"
+        }
+      }
+    },
+    "patch": {
+      "match": "^\\s*(patch)\\s*(=)\\s*(\\d)\\s*(,)\\s*(EE|IOP)\\s*(,)\\s*(\\h{1,8})\\s*(,)\\s*(byte|short|word|double|extended|beshort|beword|bedouble|bytes)\\s*(,)\\s*(\\h+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.pnach"
+        },
+        "2": {
+          "name": "keyword.operator.assignment.pnach"
+        },
+        "3": {
+          "name": "constant.numeric.pnach"
+        },
+        "4": {
+          "name": "punctuation.separator.pnach"
+        },
+        "5": {
+          "name": "storage.type.pnach"
+        },
+        "6": {
+          "name": "punctuation.separator.pnach"
+        },
+        "7": {
+          "name": "constant.numeric.address.pnach"
+        },
+        "8": {
+          "name": "punctuation.separator.pnach"
+        },
+        "9": {
+          "name": "storage.modifier.pnach"
+        },
+        "10": {
+          "name": "punctuation.separator.pnach"
+        },
+        "11": {
+          "name": "constant.numeric.hex.pnach"
+        }
+      }
+    },
+    "text-key": {
+      "match": "^\\s*(gametitle|comment|description|author)\\s*(=)(.*)$",
+      "captures": {
+        "1": {
+          "name": "variable.other.property.pnach"
+        },
+        "2": {
+          "name": "keyword.operator.assignment.pnach"
+        },
+        "3": {
+          "name": "string.unquoted.pnach"
+        }
+      }
+    },
+    "key": {
+      "match": "^\\s*(\\w+)\\s*(=)\\s*(.*?)(?=\\s*(?://|;|$))",
+      "captures": {
+        "1": {
+          "name": "variable.other.property.pnach"
+        },
+        "2": {
+          "name": "keyword.operator.assignment.pnach"
+        },
+        "3": {
+          "name": "string.unquoted.pnach"
+        }
+      }
+    }
+  }
+}

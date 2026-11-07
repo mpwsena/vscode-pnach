@@ -1,0 +1,47 @@
+{
+  "name": "vscode-pnach",
+  "displayName": "PCSX2 .pnach syntax",
+  "description": "Syntax highlighting for PCSX2 .pnach files",
+  "version": "1.0.0",
+  "publisher": "matheus-sena",
+  "license": "MIT",
+  "icon": "img/pnach.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mpwsena/vscode-pnach"
+  },
+  "keywords": [
+    "pnach",
+    "pcsx2",
+    "ps2",
+    "cheats",
+    "patches"
+  ],
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pnach",
+        "aliases": [
+          "pnach"
+        ],
+        "extensions": [
+          ".pnach"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pnach",
+        "scopeName": "source.pnach",
+        "path": "./syntaxes/pnach.tmLanguage.json"
+      }
+    ]
+  }
+}
